@@ -1,0 +1,69 @@
+ubuntu@ip-127-0-0-1:~$ puppeth
++-----------------------------------------------------------+
+| Welcome to puppeth, your Ethereum private network manager |
+|                                                           |
+| This tool lets you create a new Ethereum network down to  |
+| the genesis block, bootnodes, miners and ethstats servers |
+| without the hassle that it would normally entail.         |
+|                                                           |
+| Puppeth uses SSH to dial in to remote servers, and builds |
+| its network components out of Docker containers using the |
+| docker-compose toolset.                                   |
++-----------------------------------------------------------+
+ 
+Please specify a network name to administer (no spaces, please)
+> poa
+Sweet, you can set this via --network=poa next time!
+ 
+INFO [11-21|14:22:18] Administering Ethereum network           name=poa
+WARN [11-21|14:22:18] No previous configurations found         path=/home/ubuntu/.puppeth/poa
+ 
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Configure new genesis
+ 3. Track new remote server
+ 4. Deploy network components
+> 2
+ 
+Which consensus engine to use? (default = clique)
+ 1. Ethash - proof-of-work
+ 2. Clique - proof-of-authority
+> 2
+ 
+How many seconds should blocks take? (default = 15)
+> 2
+ 
+Which accounts are allowed to seal? (mandatory at least one)
+> 0x8B35a260F18D21414A31D1A04069eB23579B53D3
+> 0x
+ 
+Which accounts should be pre-funded? (advisable at least one)
+> 0x8B35a260F18D21414A31D1A04069eB23579B53D3
+> 0x8B35a260F18D21414A31D1A04069eB23579B53D3
+> 0x
+ 
+ 
+Specify your chain/network ID if you want an explicit one (default = random)
+> 13333337
+ 
+Anything fun to embed into the genesis block? (max 32 bytes)
+> 
+ 
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Save existing genesis
+ 3. Track new remote server
+ 4. Deploy network components
+> 2
+ 
+Which file to save the genesis into? (default = poa.json)
+> poa.json
+INFO [11-21|14:23:05] Exported existing genesis block
+ 
+What would you like to do? (default = stats)
+ 1. Show network stats
+ 2. Save existing genesis
+ 3. Track new remote server
+ 4. Deploy network components
+> ^C
+ubuntu@ip-127-0-0-1:~$
